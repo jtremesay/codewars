@@ -66,10 +66,10 @@ class Compiler(object):
         a = self.pass2(ast["a"])
         b = self.pass2(ast["b"])
         if a["op"] == "imm" and b["op"] == "imm":
-            ast = {"op": "imm", "n": int(op(a["n"], b["n"]))}
-        else:
-            ast["a"] = a
-            ast["b"] = b
+            return {"op": "imm", "n": int(op(a["n"], b["n"]))}
+
+        ast["a"] = a
+        ast["b"] = b
 
         return ast
 
