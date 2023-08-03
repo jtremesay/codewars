@@ -1,5 +1,4 @@
 from ast import Add, BinOp, Constant, Div, Expression, Mult, Name, NodeTransformer, Sub
-from ast import dump as dump_ast
 from ast import parse as parse_ast
 from operator import add, mul, sub, truediv
 from typing import Any, Iterator
